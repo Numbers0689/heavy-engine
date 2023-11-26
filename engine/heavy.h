@@ -5,6 +5,7 @@ typedef unsigned long long U64;
 
 #define NAME "Carmin 1.0"
 #define BOARD_SQ_NUM 120
+#define MAX_MOVES 2048
 
 enum { EMPTY, wP, wN, wB, wR, wQ, wK, bP, bN, bB, bR, bQ, bK };
 enum { FILE_A, FILE_B, FILE_C, FILE_D, FILE_E, FILE_F, FILE_G, FILE_H, FILE_NONE };
@@ -25,6 +26,19 @@ enum {
 
 enum { FALSE, TRUE };
 
+enum { WK_CASTLE = 1, WQ_CASTLE = 2, BK_CASTLE = 4, BQ_CASTLE = 8 };
+
+typedef struct
+{
+    int move;
+    int castlePerm;
+    int fiftyMove;
+    int enPas;
+    U64 positionKey;
+
+} STRUCT_UNDO;
+
+
 typedef struct 
 {
     int pieces[BOARD_SQ_NUM];
@@ -38,12 +52,16 @@ typedef struct
     int ply;
     int hisPly;
 
+    int castlePerm;
+
     U64 positionKey;
 
     int pieceNum[13];
     int bigPiece[3];
     int majorPiece[3];
     int minorPiece[3];
+
+    STRUCT_UNDO history[MAX_MOVES];
 
 } STRUCT_BOARD;
 
