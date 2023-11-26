@@ -1,2 +1,3 @@
 # heavy-engine
-a small chess engine project :)) 
+a small chess engine project,
+The names Carmin btw :))
