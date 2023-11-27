@@ -63,6 +63,9 @@ typedef struct
 
     STRUCT_UNDO history[MAX_MOVES];
 
+    // piece list
+    int pList[13][10];
+
 } STRUCT_BOARD;
 
 // globals
