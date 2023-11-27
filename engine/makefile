@@ -1,2 +1,2 @@
 all:
-	gcc heavy.c init.c -o heavy
+	gcc heavy.c init.c bitboard.c -o heavy
