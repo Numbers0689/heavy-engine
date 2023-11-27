@@ -99,4 +99,6 @@ extern int Sq64ToSq120[64];
 
 extern void AllInit();
 
+extern void printBitBoard(U64 bb); // bitboards
+
 #endif
