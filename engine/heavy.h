@@ -86,19 +86,21 @@ typedef struct
 } STRUCT_BOARD;
 
 // globals
-
 extern int Sq120ToSq64[BOARD_SQ_NUM];
 extern int Sq64ToSq120[64];
 
 // macros
-
 #define FR2SQ(f, r) ((21 + (f)) + ((r) * 10))
 #define SQ64(sq120) Sq120ToSq64[sq120]
+#define POP(b) PopBit(b)
+#define CNT(b) CountBits(b) 
 
 // functions 
-
 extern void AllInit();
 
-extern void printBitBoard(U64 bb); // bitboards
+// bitboards
+extern void printBitBoard(U64 bb); 
+extern int PopBit(U64 *bb);
+extern int CountBits(U64 b);
 
 #endif
