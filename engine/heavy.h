@@ -90,6 +90,9 @@ extern int Sq120ToSq64[BOARD_SQ_NUM];
 extern int Sq64ToSq120[64];
 extern U64 SetMask[64];
 extern U64 ClearMask[64];
+extern U64 pieceKeys[13][120];
+extern U64 sideKey;
+extern U64 castleKeys[16];
 
 // macros
 #define FR2SQ(f, r) ((21 + (f)) + ((r) * 10))
