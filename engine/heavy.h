@@ -2,6 +2,7 @@
 #define HEAVY_H
 
 #include "stdlib.h"
+#include "stdio.h"
 
 #define DEBUG
 
