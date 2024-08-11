@@ -1,6 +1,22 @@
 #include<stdio.h>
 #include"heavy.h"
 
+void Parse_Fen(char *fen, STRUCT_BOARD *pos) {
+    ASSERT(fen != NULL);
+    ASSERT(pos != NULL);
+
+    int i = 0;
+    int piece = 0;
+    int count = 0;
+    int sq64 = 0;
+    int sq120 = 0;
+
+    int rank = RANK_8;
+    int file = FILE_A;
+
+    ResetBoard(pos);
+}
+
 void ResetBoard(STRUCT_BOARD *pos) {
     int i = 0;
 
